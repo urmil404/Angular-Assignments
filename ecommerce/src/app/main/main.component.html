@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card my-5" style="width: 24rem;">
+        <img [src]="imagePath" class="card-img-top" alt="...">
+        <div class="card-body text-center" [ngClass]="onSale===true ? 'bg-dark text-white' : 'bg-light'">
+          <h5 class="card-title">{{productName}}</h5>
+          <p class="card-text">{{productPrice}}$</p>
+          <p *ngIf="onSale" [ngClass]="onSale===true?'text-warning fw-bold h4':''">On Sale</p>
+          <div class="d-flex fx-row counter">
+            <button
+              [ngClass]="onSale===true?'btn btn-light text-dark btn-lg mx-2':'btn btn-dark text-white btn-lg mx-2'"
+              (click)="decrementCart()">-</button>
+            <input type="number" class="inputFixed" [(ngModel)]="counter">
+            <button
+              [ngClass]="onSale===true?'btn btn-light text-dark btn-lg mx-2':'btn btn-dark text-white btn-lg mx-2'"
+              (click)="incrementCart()">+</button>
+          </div>
+          <button href="#" class="btn btn-primary" [disabled]="counter===0?true:false">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

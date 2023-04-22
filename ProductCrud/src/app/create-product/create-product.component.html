@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-1 offset-1"></div>
+    <div class="col-md-8 my-5">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Product Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Product Name"
+          [(ngModel)]="product.name" required>
+      </div>
+      <div class="form-group my-3">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" placeholder="Enter Product Price"
+          [(ngModel)]="product.price" required>
+      </div>
+      <div class="form-group my-3">
+        <label for="ptype">Product Type</label>
+        <input type="text" class="form-control" id="ptype" placeholder="Enter Product Type" [(ngModel)]="product.type"
+          required>
+      </div>
+      <div class="form-group my-3">
+        <label for="powner">Product Owner</label>
+        <input type="text" class="form-control" id="powner" placeholder="Enter Product Owner"
+          [(ngModel)]="product.owner" required>
+      </div>
+      <div class="form-group my-3">
+        <label for="pcontact">Contact Number</label>
+        <input type="number" class="form-control" id="pcontact" placeholder="Enter Product Number"
+          [(ngModel)]="product.contactNumber" required>
+      </div>
+      <div class="form-group my-3">
+        <label for="pemail">Contact Email</label>
+        <input type="email" class="form-control" id="pemail" placeholder="Enter Product Email"
+          [(ngModel)]="product.email" required>
+      </div>
+      <div class="form-group my-3 d-grid">
+        <button class="btn btn-success" (click)="addProduct()">Add Product</button>
+      </div>
+    </div>
+  </div>
+</div>

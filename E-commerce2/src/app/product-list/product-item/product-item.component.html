@@ -1,0 +1,11 @@
+<div class="card-body my-5 mx-5">
+  <img [src]="carsdata.img" alt="car name" height="300" width="300">
+  <h1 class="display-6 mx-5 my-5">{{ carsdata.name }}</h1>
+  <p class="price">{{carsdata.price}} Cr.</p>
+  <div class="d-flex justify-content-between">
+    <button class="btn btn-light" (click)="decrementCart(carsdata.id)" [disabled]="carsdata.quantity===0">-</button>
+    <input type="text" name="" id="" [value]="carsdata.quantity" disabled [ngStyle]="{'width':'30px'}">
+    <button class="btn btn-light" (click)="incrementCart(carsdata.id)">+</button>
+  </div>
+</div>
+<p>{{changeDetection()}}</p>

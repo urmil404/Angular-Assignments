@@ -1,0 +1,10 @@
+.cart {
+  z-index: 1;
+  position: inherit;
+}
+
+.cartSpan {
+  display: inline-block !important;
+  margin: 2px 0px 0px 10px;
+  position: absolute;
+}

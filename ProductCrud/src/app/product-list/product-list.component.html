@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row my-5">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card" style="width: 50%; float: left;margin: 5px;padding-left: 5px;"
+          *ngFor="let p of products ; index as i">
+          <h4 style="width:80% ; margin: 35px; text-align: center;" class="card-header">Name: {{p.Name}}</h4>
+          <p style="width:80%;margin: 0 35px 15px 35px;" class="card-text">Price: {{p.Price}}</p>
+          <p style="width:80%;margin: 0 35px 15px 35px;" class="card-text">Type: {{p.Type}}</p>
+          <p style="width:80%;margin: 0 35px 15px 35px;" class="card-text">Owner: {{p.Owner}}</p>
+          <p style="width:80%;margin: 0 35px 15px 35px;" class="card-text">Phone No: {{p.PhNumber}}</p>
+          <p style="width:80%;margin: 0 35px 15px 35px;" class="card-text">Email: {{p.Email}}</p>
+          <!-- <button class="btn btn-success form-control" style="width:80%;margin: 0 35px 15px 35px;" type="submit"
+            (click)="edit(Name, price, type, owner, number, mail, p, button, i)">Edit</button>
+          <button class="btn btn-danger form-control" style="width:80%;margin: 0 35px 15px 35px;" type="submit"
+            (click)="delete(p)">Delete</button> -->
+        </div>
+        <table class="table">
+          <thead>
+            <tr class="bg-warning text-dark text-center">
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Type</th>
+              <th scope="col">Owner</th>
+              <th scope="col">Contact Number</th>
+              <th scope="col">Email</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let p of this.products; let i = index">
+            <tr class="text-center">
+              <td>
+                <h2>{{i+1}}</h2>
+              </td>
+              <td>
+                <h2>{{p.name}}</h2>
+              </td>
+              <td>
+                <h2>{{p.price}}</h2>
+              </td>
+              <td>
+                <h2>{{p.type}}</h2>
+              </td>
+              <td>
+                <h2>{{p.owner}}</h2>
+              </td>
+              <td>
+                <h2 appRanking class="rounded py-1">{{p.contactNumber}}</h2>
+              </td>
+              <td>
+                <h2 appRanking class="rounded py-1">{{p.email}}</h2>
+              </td>
+              <!-- <td>
+                <button class="btn btn-primary" (click)="updateProduct(items.id, $event)">Edit</button>
+              </td>
+              <td>
+                <button class="btn btn-danger" (click)="deleteProduct(items.id, $event)">Delete</button>
+              </td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

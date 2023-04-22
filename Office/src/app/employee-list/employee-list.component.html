@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row my-5">
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table">
+          <thead>
+            <tr class="bg-warning text-dark text-center">
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Type</th>
+              <th scope="col">Rank</th>
+              <th scope="col">Change Contact</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let employee of employees; let i = index">
+            <tr class="text-center">
+              <td>
+                <h2>{{employee.id}}</h2>
+              </td>
+              <td>
+                <h2>{{employee.name}}</h2>
+              </td>
+              <td>
+                <h2>{{employee.contact}}</h2>
+              </td>
+              <td>
+                <h2>{{employee.type}}</h2>
+              </td>
+              <td>
+                <h2 appRanking class="rounded py-1">{{employee.rank}}</h2>
+              </td>
+              <td>
+                <button class="btn btn-dark my-1" (click)="changeContact(i)">change Contact</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- office component -->
+  <app-office [officeContact]="officeContact"></app-office>
+</div>
